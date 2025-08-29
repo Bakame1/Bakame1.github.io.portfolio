@@ -45,6 +45,19 @@
           <span>Email : marko.babic@danet.one</span>
         </a>
       </nav>
+      
+      <form action="https://getform.io/f/bgdjlmoa" method="POST">
+    <input type="text" name="name" placeholder="name">
+    <input type="email" name="email" placeholder="email">
+    <input type="text" name="message"placeholder="message">
+    <!-- add hidden Honeypot input to prevent spams -->
+    <input type="hidden" name="_gotcha" style="display:none !important">
+    
+    
+    <button type="submit">Send</button>
+</form>
+</form>
+
     </header>
 
     <!-- Compétences techniques -->
@@ -70,8 +83,24 @@
           <!-- Remplace src par le chemin de l'image du projet -->
           <img src="projet1.jpg" alt="AC_recognition" />
           <div class="project-body">
-            <h3 id="proj1-title" style="font-size:16px;margin-bottom:2px">Reconnaissance d'image de thermostats</h3>
-            <p class="project-desc">Description en une phrase du projet 1.</p>
+            <h3 id="proj1-title" style="font-size:16px;margin-bottom:0px">Reconnaissance d'image de thermostats</h3>
+            <p class="project-desc">Lecture de la temperature malgré les variations d'angle, de luminosité ou d'obstacles visuels.</p>
+
+            <!-- Contexte
+              "Développement d’un modèle de reconnaissance visuelle pour décoder les chiffres affichés sur des climatiseurs à partir de photos prises avec un smartphone."
+
+              Données
+              "200 images d’interfaces de climatiseurs collectées sur le campus de l’université SJTU, représentant des conditions réelles d’utilisation."
+
+              Objectif
+              "Lire automatiquement les chiffres affichés, même en présence de perturbations visuelles comme les reflets, les ombres ou les occlusions."
+
+              Défi technique
+              "Adapter le modèle aux variations de luminosité, d’angle de prise de vue, de distorsion de perspective et de qualité d’image."
+
+              Résultat attendu
+              "Atteindre une haute précision et robustesse pour une reconnaissance fiable, malgré les imperfections des photos."-->
+
             <div class="project-tech">Langages : Python</div>
           </div>
         </article>
@@ -80,7 +109,10 @@
           <img src="projet2.png" alt="Image du projet 2" />
           <div class="project-body">
             <h3 id="proj2-title" style="font-size:16px;margin-bottom:2px">Clustering d'images</h3>
-            <p class="project-desc"><!-- Remplace par une phrase décrivant le projet en une phrase. -->Description en une phrase du projet 2.</p>
+            <p class="project-desc">Modèle de clustering non supervisé pour regrouper 955 images de snacks en 20 classes.</p>
+
+              <!--Details Développement d'un modèle de clustering non supervisé pour regrouper 955 images de snacks en 20 classes, sans utiliser les labels existants. 
+              Comparaison de plusieurs algorithmes (ex : K-means, Agglomerative;Kmedoids) et descripteurs d'images pour optimiser la précision et l'interprétation des clusters(mettre les features).-->
             <div class="project-tech">Langages : Python</div>
           </div>
         </article>
@@ -89,7 +121,7 @@
           <img src="projet3.png" alt="Image du projet 3" />
           <div class="project-body">
             <h3 id="proj3-title" style="font-size:16px;margin-bottom:2px">Pac-Man</h3>
-            <p class="project-desc"><!-- Remplace par une phrase décrivant le projet en une phrase. -->Description en une phrase du projet 3.</p>
+            <p class="project-desc">Jeu Pac-Man avec drag and drop et personalisation.</p>
             <div class="project-tech">Langages : Java FX</div>
           </div>
         </article>
