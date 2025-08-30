@@ -35,28 +35,18 @@
           <span>LinkedIn</span>
         </a>
 
-        <!-- Mail -->
-        <a class="link-btn" href="mailto:marko.babic@danet.one" aria-label="Envoyer un email">
+        <!-- Mail (ouvre la pop-up) -->
+        <a class="link-btn" href="#contactPopup" aria-label="Envoyer un email" onclick="openPopup(event)">
           <span class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 6.5v11A2.5 2.5 0 0 0 4.5 20h15a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 19.5 4h-15A2.5 2.5 0 0 0 2 6.5zM4 7.2l7.2 5 7.2-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
-          <span>Email : marko.babic@danet.one</span>
+          <span>Email</span>
         </a>
+
       </nav>
-      
-      <form action="https://getform.io/f/bgdjlmoa" method="POST">
-    <input type="text" name="name" placeholder="name">
-    <input type="email" name="email" placeholder="email">
-    <input type="text" name="message"placeholder="message">
-    <!-- add hidden Honeypot input to prevent spams -->
-    <input type="hidden" name="_gotcha" style="display:none !important">
     
-    
-    <button type="submit">Send</button>
-</form>
-</form>
 
     </header>
 
@@ -130,5 +120,37 @@
     </section>
 
   </div>
+
+
+
+<!-- Pop-up de contact (masquée par défaut) -->
+<div id="contactPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>Me contacter</h2>
+    <form action="https://getform.io/f/bgdjlmoa" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Nom" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <input type="hidden" name="_gotcha" style="display:none !important">
+      <button type="submit">Envoyer</button>
+    </form>
+    
+  </div>
+</div>
+
+<!-- Message de succès avec overlay -->
+<div id="globalSuccessOverlay" class="global-success-overlay">
+  <div class="global-success-message">
+    Message envoyé avec succès !
+  </div>
+</div>
+
+
+
+
+
+
+<script src="script.js"></script>
 </body>
 </html>

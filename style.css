@@ -1,12 +1,20 @@
 /* Variables globales (thème clair par défaut) */
 :root {
-  --bg-base: #f8fafc;
-  --text-base: #0f172a;
-  --card-bg: white;
-  --shadow-color: rgba(12,16,29,0.04);
-  --border-color: rgba(15,23,42,0.06);
-  --skill-bg: #f1f5f9;
-  --skill-border: rgba(2,6,23,0.03);
+  --bg-base: #FFF7F7;
+  --bg-reverse:#201314;
+
+  --text-base: #641723;
+  --text-base-2 : #CE2C31;
+
+  --bg_link_btn : #FFCDCE;
+
+  --card-bg: #FEEBEC;
+  
+  --skill-bg: #FFDBDC;
+
+  --shadow-color: #FDBDBE;
+  --border-color: #F4A9AA;
+  --skill-border: #EB8E90;
 
   --font-title:'Iceberg';
   --font-title-body:'Iceberg';
@@ -15,14 +23,20 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-base: #201314;
+    --bg-reverse:#FFF7F7;
+
+
     --text-base: #FFD1D9;
     --text-base-2 : #FF9592;
+
     --bg_link_btn : #611623;
+
     --card-bg: #3B1219;
-    --skill-bg: #333;
-    --shadow-color: rgba(255,255,255,0.1);
-    --border-color: rgba(255,255,255,0.1);
-    --skill-border: rgba(255,255,255,0.2);
+    --skill-bg: #500F1C;
+
+    --shadow-color: #72232D;
+    --border-color: #8C333A;
+    --skill-border: #B54548;
   }
 }
 /* Styles appliquant les variables */
@@ -162,3 +176,119 @@ section {
 @media (prefers-reduced-motion: reduce) {
   .icon, .link-btn { transition: none; }
 }
+
+
+/* Pop-up de contact */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 28px var(--shadow-color);
+  position: relative;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: var(--text-base);
+}
+
+.close-popup {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-base);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--skill-bg);
+  color: var(--text-base);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: var(--bg_link_btn);
+  color: var(--text-base);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+/* Animation pour le message de succès */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Overlay pour le message de succès */
+.global-success-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-base);
+  z-index: 1001;
+  justify-content: center;
+  align-items: center;
+}
+
+.global-success-message {
+  background-color: var(--bg-reverse);
+  color: green;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px var(--shadow-color);
+  animation: slideIn 0.3s ease-out forwards;
+  text-align: center;
+  font-weight: 600;
+  max-width: 80%;
+}
+
+
+
+
