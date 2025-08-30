@@ -24,7 +24,7 @@ function showGlobalSuccessMessage() {
         overlay.style.display = 'none';
         overlay.style.opacity = '1';
       }, 300);
-    }, 3000);
+    }, 1000);
   }
 }
 
