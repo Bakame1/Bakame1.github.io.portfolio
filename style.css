@@ -293,13 +293,17 @@ section {
 
 /* Boutons de langue */
 .language-selector {
-  display: flex;
-  gap: 12px;
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 10;
+  z-index: 1000;
+  display: flex;
+  gap: 12px;
+  border-radius: 50%;
+  padding: 5px;
+  
 }
+
 
 .language-btn {
   display: inline-flex;
@@ -332,3 +336,59 @@ section {
   height: 100%;
 }
 
+/* Experience */
+.experience {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 20px;
+  box-shadow: 0 8px 28px var(--shadow-color);
+}
+
+.experience-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-body h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: var(--text-base-2);
+}
+
+.experience-body .project-desc {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.experience-body .project-tech {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-image {
+  flex-shrink: 0;
+  width: 20%;
+  max-width: 400px;
+}
+
+.experience-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Réactivité */
+@media (max-width: 768px) {
+  .experience {
+    flex-direction: column;
+  }
+  .experience-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
